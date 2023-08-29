@@ -7,7 +7,7 @@ def generate_random_python_code(length):
     return ''.join(random.choice(characters) for _ in range(length))
 
 def create_random_python_code_file(filename):
-    num_lines = random.randint(500, 1000)
+    num_lines = random.randint(500, 1000) 
     max_line_length = 200  # İstediğiniz maksimum satır uzunluğu
     with open(filename, "w") as f:
         for _ in range(num_lines):
@@ -16,7 +16,7 @@ def create_random_python_code_file(filename):
     
 
 def clean_repository():
-    os.system('git clone https://github.com/onatkarabulut/git_loader.git temp_repo')  # Uzak repo klonla
+    os.system('git clone {} temp_repo'.format(repo_name))  # Uzak repo klonla
     os.chdir('temp_repo')  # Temp dizinine geç
     os.system('git rm -r *')  # Mevcut bütün dosyaları temizle
     os.system('git commit -m "Clean repository"')
@@ -25,7 +25,7 @@ def clean_repository():
     os.system('rm -rf temp_repo')  # Temp dizini sil
 
 def load_file(filename):
-    os.system('git clone https://github.com/onatkarabulut/git_loader.git temp_repo')  # Uzak repo klonla
+    os.system('git clone {} temp_repo'.format(repo_name))  # Uzak repo klonla
     os.chdir('temp_repo')  # Temp dizinine geç
     os.system('cp ../{} .'.format(filename))  # Hedef dosyayı temp dizinine kopyala
     os.system('git add {}'.format(filename))
@@ -44,5 +44,6 @@ def main():
     print("===============================================")
     
 if __name__ == '__main__':
+    repo_name = "https://github.com/onatkarabulut/git_loader.git" # Öncelikle GitHub'da bir private repo oluşturun ve linkini sonuna '.git' ekleyerek girin
     for i in range (random.randint(1,8)):
         main()
