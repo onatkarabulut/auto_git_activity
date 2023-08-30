@@ -6,11 +6,11 @@ git clone  https://github.com/onatkarabulut/auto_git_activity.git
 ```
 ![Screenshot](./running1_.png)
 ---
-### Daha sonra git-loader.py içerisinde bulunan repo_name değerine kendi reponuzu giriniz
-![Screenshot](./running3_.png)
----
-### Ardından scripti aşağıdaki gibi çalıştırabilirsiniz
-![Screenshot](./running4_.png)
+### Ardından scripti script'in olduğu dizine girip aşağıdaki gibi çalıştırabilirsiniz
+```bash
+bash auto_git_loader.sh
+```
 ![Screenshot](./running2_.png)
+![Screenshot](./running4_.png)
 ---
-- ##### direk python kodunu çalıştırabilecekken script ekleme sebebim scripti home dizininize taşıyıp istediğiniz gibi yönetebilecek olmanızdır.
+- ##### direkt python programını çalıştırabilecek iken script ekleme sebebim scripti home dizininize taşıyıp istediğiniz gibi yönetebilecek olmanızdır.
